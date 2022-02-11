@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>javaScript Dom</title>
+    
+</head>
+<body>
+    <section class="container val">
+      
+  
+        <app-count v-for = "post in posts" :id = "post.id" ></app-count>
+        <p>
+            {{ calcAge}} <br>
+            {{printName()}}
+            <br>
+            {{ reverseName}}
+
+        </p>
+
+        <label>Seach For Programming Language: </label>
+       <input type="text" v-model= "findLanguage">
+       <ol>
+           <li v-for= "lang in filterLanguage" >
+               {{ lang }}
+           </li>
+       </ol>
+
+       <label>Write Your UserName: </label>
+       <input type="text" v-model= "UserName">
+       <p> {{ validateUserName }} </p>
+
+       <label>Hour: </label>
+       <input type="text" v-model= "hour">
+
+       <label>Minute: </label>
+       <input type="text" v-model= "minute">
+       <label>Second: </label>
+       <input type="text" v-model= "second">
+      
+    </section>
+
+</body>
+<script src="js/vue.js"></script>
+<script src="js/script.js"></script>
+
+
+</html>
